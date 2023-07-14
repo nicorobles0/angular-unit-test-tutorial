@@ -1,0 +1,9 @@
+.header{
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    height: 15vh;
+}
+.header__logo{
+    height: 90%;
+}

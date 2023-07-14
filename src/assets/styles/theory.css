@@ -1,0 +1,39 @@
+.theory {
+  box-sizing: border-box;
+  padding: 0 3rem;
+  width: 100%;
+}
+.theory__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+.theory__subtitle,
+.theory__li{
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary);
+}
+.theory__img{
+  display: block;
+  margin: 1rem auto;
+  width: 45rem;
+  height: auto;
+}
+.theory__code {
+  font-size: 1.3rem;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: .2rem;
+}
+.theory__text {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 2.1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+.theory__blod{
+  color: var(--color-secondary);
+}

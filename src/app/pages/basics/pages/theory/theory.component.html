@@ -1,0 +1,86 @@
+<section class="theory">
+  <h1 class="theory__title">Test Básicos</h1>
+  <ol>
+    <li class="theory__li">
+      <h2 class="theory__subtitle">Estructura archivo de tests</h2>
+    </li>
+    <img class="theory__img" src="/assets/img/theory-1/theory-1.png" alt="Estructura archivo tests">
+    <!-- describe -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">describe() y xdescribe()</h2>
+    </li>
+    <p class="theory__text">
+      La función <strong class="theory__blod">describe()</strong> es la función
+      principal en donde se deben realizar las configuraciones para las pruebas
+      y en donde se implementan todos los test que quieres aplicar a tu clase o
+      componente. Esta función acepta dos argumentos: una cadena que describe el
+      conjunto de pruebas y una función de devolución de llamada que contiene
+      las pruebas relacionadas.
+    </p>
+    <code class="theory__code">
+      <ol class="code__list">
+        <li class="code__line"><strong class="theory__blod">describe</strong>("ComponenteAProbar", () =>  &#123;</li>
+        <li class="code__line">/* Declaración de variables */</li>
+        <li class="code__line">/* beforeEach afterEach etc... */</li>
+        <li class="code__line">/* Test necesarios */</li>
+        <li class="code__line">&#125;</li>
+      </ol>
+    </code>
+    <p class="theory__text">
+      Si a la función se le agrega una x al inicio <strong class="theory__blod">xdescribe()</strong>
+      esto hará que la prueba como tal y todo lo que contiene sea omitido al momento de correr los tests
+    </p>
+
+    <!-- Configuración TESBED -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">Configuración Tesbed</h2>
+    </li>
+    <p class="theory__text">
+      El TesBed hace referencia a la utilidad de angular que nos permite crear
+      un módulo de prueba, para allí poder hacer todas las configuraciones para
+      poder probar nuestras clases.
+    </p>
+    <p class="theory__text">
+      Dentro de TesBed tenemos la propiedad configureTestingModule, la cual nos
+      permite añadir las propiedades de nuestro módulo, dentro de este podemos
+      definir una estructura similar a la siguiente:
+    </p>
+    <code class="theory__code">
+      <ol class="code__list">
+        <li class="code__line">
+          <strong class="theory__blod">TestBed</strong
+          >.configureTestingModule(&#123;
+        </li>
+        <li class="code__line">
+          <strong class="theory__blod">declarations:</strong>
+          [ExampleComponent],
+        </li>
+        <li class="code__line">
+          <strong class="theory__blod">imports:</strong> [
+          HttpClientTestingModule ]
+        </li>
+        <li class="code__line">
+          <strong class="theory__blod">providers:</strong> [&#123; provide:
+          PLATFORM_ID, useValue: 'browser' &#125;],
+        </li>
+        <li class="code__line">)&#125;</li>
+      </ol>
+    </code>
+
+    <p class="theory__text">
+      Tesbed crea un módulo para testear nuestros componentes, por lo tanto lo
+      que añadimos en nuetro Tesbed se asemeja al módulo en donde tenemos
+      declarado nuestro componente:<br />
+    </p>
+    <p class="theory__text">
+      <strong class="theory__blod">Declarations: </strong> Los componentes ,
+      directivas y canalizaciones que pertenecen,<br />
+      <strong class="theory__blod">Imports: </strong> Otros módulos cuyas clases
+      exportadas son necesarias para las plantillas de componentes declaradas,
+      <br />
+      <strong class="theory__blod">Providers: </strong> Creadores de servicios
+      que este NgModule contribuye a la colección global de servicios
+    </p>
+
+  </ol>
+</section>

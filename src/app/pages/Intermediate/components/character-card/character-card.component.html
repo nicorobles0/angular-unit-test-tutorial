@@ -1,0 +1,7 @@
+<article class="character" *ngIf="character">
+    <a class="character__content" routerLink="/hola">
+        <img class="character__img" [src]="character.image" [alt]="character.name">
+        <h2 class="character__name">{{ character.name | addName }} </h2>
+        <span class="character__link" >Ver más</span>      
+    </a>
+</article>

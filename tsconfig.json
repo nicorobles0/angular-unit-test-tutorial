@@ -19,6 +19,12 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "paths": {
+      "@components/*": ["src/app/shared/components/*"],
+      "@interfaces/*": ["src/app/shared/interfaces/*"],
+      "@layouts/*": ["src/app/shared/layouts/*"],
+    },
+
     "lib": [
       "ES2022",
       "dom"

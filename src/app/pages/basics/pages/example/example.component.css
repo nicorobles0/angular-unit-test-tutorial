@@ -1,0 +1,31 @@
+.counter {
+    width: 100%;
+    text-align: center;
+  }
+  .counter__title {
+    font-size: 3rem;
+  }
+  .counter__buttons {
+    width: 100%;
+  }
+  .counter__button, .defer__button {
+    background-color: var(--color-secondary);
+    border-radius: 0.7rem;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 35px;
+    margin: 0.5rem;
+    width: 35px;
+  }
+  .defer__button{
+    width: max-content;
+    padding: 0 1.5rem;
+  }
+  .defer__button:disabled{
+    background-color: var(--color-contrast);
+    cursor: wait;
+  }
+  

@@ -1,0 +1,8 @@
+<section class="counter">
+    <h2 class="counter__title">Contador: <br><span class="counter__var">{{ counter }}</span></h2>
+    <div class="counter__buttons">
+        <button class="counter__button" (click)="increaseBy(-1)"> -1 </button>
+        <button [disabled]="disabledPlusButton" class="counter__button" (click)="increaseBy(1)"> +1 </button>
+    </div>
+        <button [disabled]="disabledDeferButton" class="defer__button" (click)="deferIncreaseBy(+1)">Incrementar 1 en 3 Seg</button>
+</section>

@@ -6,7 +6,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CharacterService } from '../../services/character.service';
 import { of } from 'rxjs';
 import { AddNamePipe } from '../../pipes/add-name.pipe';
-
+// Mock de respuesta esperada al llmar servicio de traer personajes
 const mockResult = [
   {
     id: 1,
@@ -55,16 +55,22 @@ const mockResult = [
 ];
 
 describe('IntermediateIndexComponent', () => {
+  // Definición de nuestras variables
   let component: IntermediateIndexComponent;
   let fixture: ComponentFixture<IntermediateIndexComponent>;
   let compiled: HTMLElement;
+  // Declaramos una variable del tipo de nuestro servicio
   let characterSerivice: CharacterService;
+  // Definimos variable de tipo espia para espiar la funcion de getCharacterList
   let spyGetCharacterList: jasmine.Spy;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      // Declaramos componentes y pipes utilizados en el componente
       declarations: [ IntermediateIndexComponent, CharacterCardComponent, AddNamePipe],
+      // Importamos Http Client Module (Importaten: Utilizar el de testing)
       imports: [ HttpClientTestingModule ],
+      // Proveemos el servicio en nuestro módulo de pruebas
       providers: [ CharacterService  ]
     })
     .compileComponents();
@@ -73,10 +79,10 @@ describe('IntermediateIndexComponent', () => {
   beforeEach( () => {
     fixture = TestBed.createComponent(IntermediateIndexComponent);
     component = fixture.componentInstance;
-    // Creamos un espía en la función getCharacterList
+    // Asignamos un espía en la función getCharacterList
     spyGetCharacterList = spyOn( component, 'getCharacterList' ).and.callThrough();
     fixture.detectChanges();
-    // asignamos el html al compiled
+    // Asignamos el html compilado a nuestra variable compiled
     compiled = fixture.nativeElement;
   })
 

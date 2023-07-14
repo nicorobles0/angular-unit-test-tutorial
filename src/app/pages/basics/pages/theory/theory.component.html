@@ -1,10 +1,14 @@
 <section class="theory">
-  <h1 class="theory__title">Test Básicos</h1>
+  <h1 class="theory__title">Introducción</h1>
   <ol>
     <li class="theory__li">
       <h2 class="theory__subtitle">Estructura archivo de tests</h2>
     </li>
-    <img class="theory__img" src="/assets/img/theory-1/theory-1.png" alt="Estructura archivo tests">
+    <img
+      class="theory__img"
+      src="/assets/img/theory-1/theory-1.png"
+      alt="Estructura archivo tests"
+    />
     <!-- describe -->
     <li class="theory__li">
       <h2 class="theory__subtitle">describe() y xdescribe()</h2>
@@ -19,7 +23,10 @@
     </p>
     <code class="theory__code">
       <ol class="code__list">
-        <li class="code__line"><strong class="theory__blod">describe</strong>("ComponenteAProbar", () =>  &#123;</li>
+        <li class="code__line">
+          <strong class="theory__blod">describe</strong>("ComponenteAProbar", ()
+          => &#123;
+        </li>
         <li class="code__line">/* Declaración de variables */</li>
         <li class="code__line">/* beforeEach afterEach etc... */</li>
         <li class="code__line">/* Test necesarios */</li>
@@ -27,13 +34,15 @@
       </ol>
     </code>
     <p class="theory__text">
-      Si a la función se le agrega una x al inicio <strong class="theory__blod">xdescribe()</strong>
-      esto hará que la prueba como tal y todo lo que contiene sea omitido al momento de correr los tests
+      Si a la función se le agrega una x al inicio
+      <strong class="theory__blod">xdescribe()</strong>
+      esto hará que la prueba como tal y todo lo que contiene sea omitido al
+      momento de correr los tests
     </p>
 
     <!-- Configuración TESBED -->
     <li class="theory__li">
-      <h2 class="theory__subtitle">Configuración Tesbed</h2>
+      <h2 class="theory__subtitle">Tesbed</h2>
     </li>
     <p class="theory__text">
       El TesBed hace referencia a la utilidad de angular que nos permite crear
@@ -82,5 +91,51 @@
       que este NgModule contribuye a la colección global de servicios
     </p>
 
+    <!-- IT  -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">it() Y xit()</h2>
+    </li>
+    <p class="theory__text">
+      <strong class="theory__blod">it()</strong> se utiliza para definir una
+      prueba individual, , se especifica qué se espera que suceda en un
+      escenario determinado. acepta dos argumentos: una cadena que describe la
+      especificación y una función de devolución de llamada que contiene el
+      código de la prueba en sí. las pruebas definidas con
+      <strong class="theory__blod">xit()</strong> se consideran "pendientes" y
+      no se ejecutan.
+    </p>
+    <code class="theory__code">
+      <ol class="code__list">
+        <li class="code__line">
+          <strong class="theory__blod"> it</strong>("debería sumar dos números
+          correctamente", () => &#123;
+        </li>
+        <li class="code__line">var resultado = suma(2, 3);</li>
+        <li class="code__line">expect(resultado).toBe(5);</li>
+        <li class="code__line">)&#125;);</li>
+      </ol>
+    </code>
+    <li class="theory__li">
+      <h2 class="theory__subtitle">expect()</h2>
+    </li>
+    <p class="theory__text">
+      <strong class="theory__blod">expect()</strong> se utiliza para realizar
+      afirmaciones o expectativas en las pruebas unitarias.
+    </p>
+    <code class="theory__code">
+      <ol class="code__list">
+        <li class="code__line">
+          expect(valor).toBe(5);// Verifica igualdad estricta (===)
+        </li>
+        <li class="code__line">
+          expect(array).toContain(3); // Verifica si el valor 3 está presente en
+          el array
+        </li>
+        <li class="code__line">
+          expect(objeto).toEqual(&#123; prop: 123 &#125;); // Verifica igualdad profunda
+          de objetos
+        </li>
+      </ol>
+    </code>
   </ol>
 </section>

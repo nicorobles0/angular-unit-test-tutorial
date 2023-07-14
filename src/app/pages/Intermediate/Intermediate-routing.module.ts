@@ -4,9 +4,14 @@ import { IntermediateIndexComponent } from './pages/index/intermediate-index.com
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'teoria2',
     component: IntermediateIndexComponent
-  }
+  },
+  {
+    path: 'ejercicio',
+    component: IntermediateIndexComponent
+  },
+
 ]
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -1,5 +1,80 @@
 [
-    {
-        
-    }
+  {
+    "label": "Introducción",
+    "isRelative": true,
+    "path": "/basico",
+    "children": [
+      {
+        "label": "General",
+        "isRelative": true,
+        "path": "/basico/teoria"
+      }
+    ]
+  },
+  {
+    "label": "Primeros Tests",
+    "isRelative": true,
+    "path": "/basico",
+    "children": [
+      {
+        "label": "Definiciones",
+        "isRelative": true,
+        "path": "/basico/teoria-2"
+      },
+      {
+        "label": "Ejercicio",
+        "isRelative": true,
+        "path": "/basico/ejemplo"
+      },
+      {
+        "label": "Ver Tests",
+        "isRelative": false,
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/basics/pages/example/example.component.spec.ts"
+      }
+    ]
+  },
+  {
+    "label": "Test Servicios",
+    "isRelative": true,
+    "path": "/intermedio",
+    "children": [
+      {
+        "label": "Definiciones",
+        "isRelative": true,
+        "path": "/intermedio/teoria"
+      },
+      {
+        "label": "Ejercicio",
+        "isRelative": true,
+        "path": "/intermedio/ejercicio"
+      },
+      {
+        "label": "Ver Tests",
+        "isRelative": false,
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/services/character.service.spec.ts"
+      }
+    ]
+  },
+  {
+    "label": "Tests Pipes",
+    "isRelative": true,
+    "path": "/intermedio",
+    "children": [
+      {
+        "label": "Definiciones",
+        "isRelative": true,
+        "path": "/basico/teoria"
+      },
+      {
+        "label": "Ejercicio",
+        "isRelative": true,
+        "path": "/intermedio"
+      },
+      {
+        "label": "Ver Tests",
+        "isRelative": false,
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pipes/add-name.pipe.spec.ts"
+      }
+    ]
+  }
 ]

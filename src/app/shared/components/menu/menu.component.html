@@ -1,25 +1,33 @@
 <nav class="menu">
-    <h1 class="menu__title">Menú</h1>
-    <ul class="menu__list">
-        <li class="menu__item">
-            <a class="menu__link" routerLink="/basico">Test Básicos</a>
-        </li>
-        <ul class="menu__list menu__list--sublist">
+  <h2 class="menu__title">Menú</h2>
+  <ul class="menu__list">
+    <ng-container *ngFor="let menuItem of menuList">
+      <li class="menu__item">
+        <a class="menu__link" [routerLink]="menuItem.path"
+          >{{ menuItem.label }}
+        </a>
+      </li>
+      <ng-container *ngIf="menuItem.children">
+        <ng-container *ngFor="let subMenu of menuItem.children">
+          <ul class="menu__list menu__list--sublist">
             <li class="menu__item menu__item--subitem">
-                <a class="menu__link menu__link--sublink" routerLink="/basico/teoria">Introducción</a>
+              <a
+                *ngIf="subMenu.isRelative"
+                class="menu__link menu__link--sublink"
+                [routerLink]="subMenu.path"
+                > {{ subMenu.label }} </a
+              >
+              <a
+                *ngIf="!subMenu.isRelative"
+                class="menu__link menu__link--sublink"
+                [href]="subMenu.path"
+                target="_blank"
+                > {{ subMenu.label }} </a
+              >
             </li>
-            <li class="menu__item menu__item--subitem">
-                <a class="menu__link menu__link--sublink" routerLink="/basico/ejemplo">Ejemplo</a>
-            </li>
-            <li class="menu__item menu__item--subitem">
-                <a class="menu__link menu__link--sublink" routerLink="/basico">Explicación Ejemplo</a>
-            </li>
-        </ul>
-        <li class="menu__item">
-            <a class="menu__link" routerLink="/intermedio">Test Intemedios</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" routerLink="/">Próximo...</a>
-        </li>
-    </ul>
+          </ul>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ul>
 </nav>

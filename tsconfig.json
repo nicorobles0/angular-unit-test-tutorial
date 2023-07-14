@@ -23,6 +23,7 @@
       "@components/*": ["src/app/shared/components/*"],
       "@interfaces/*": ["src/app/shared/interfaces/*"],
       "@layouts/*": ["src/app/shared/layouts/*"],
+      "@data/*": ["src/app/shared/data/*"],
     },
 
     "lib": [

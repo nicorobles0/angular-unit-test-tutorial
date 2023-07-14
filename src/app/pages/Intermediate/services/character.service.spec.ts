@@ -28,7 +28,7 @@ describe('CharacterService', () => {
   });
 
   it('should be return list by results', () => {
-    // Mock Response
+    // Mock Respuesta tal cual la da el servidor
     const Resp: CharactersList = {
       info: {
         count: 826,
@@ -79,10 +79,12 @@ describe('CharacterService', () => {
         },
       ],
     };
+    // Mock de respuesta esperada
     const expecResp: Character[] = Resp.results;
     // Subscripción al método get
     service.getCharacterList('character').subscribe({
       next(results) {
+        // evaluación de resultados
         expect(results).toHaveSize(2);
         expect(results).toEqual(expecResp);
       },
@@ -97,11 +99,13 @@ describe('CharacterService', () => {
   });
 
   it('should be call getCharacterList By GET method ', () => {
+    // Nos suscribimos al servicio
     service.getCharacterList('character').subscribe();
-    // Creamos un espera a que se haga un llamado sobre una url específica
+    // Creamos un escuchador en la url específica de nuestro servicio
     const request = httpMock.expectOne(
       'https://rickandmortyapi.com/api/character'
     );
+    // Comprobamos que el llamado sea del tipo indicado
     expect(request.request.method).toBe('GET');
   });
 

@@ -56,12 +56,12 @@
       {
         "label": "Ver Tests Componente",
         "isRelative": false,
-        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pages/index/intermediate-index.component.spec.ts"
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pages/example/example.component.spec.ts"
       },
       {
         "label": "Ver Tests Componente (Mock)",
         "isRelative": false,
-        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pages/index/intermediate-index-variant.component.spec.ts"
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pages/example/example-mock.component.spec.ts"
       },
       {
         "label": "(Mock)",
@@ -81,9 +81,19 @@
         "path": "/intermedio/ejercicio2"
       },
       {
-        "label": "Ver Tests",
+        "label": "Ver Tests Pipe",
         "isRelative": false,
         "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pipes/add-name.pipe.spec.ts"
+      },     
+      {
+        "label": "Ver Tests Input",
+        "isRelative": false,
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/components/character-card/character-card.component.spec.ts"
+      },
+      {
+        "label": "Ver Tests Output",
+        "isRelative": false,
+        "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pages/example2/example2.component.spec.ts"
       }
     ]
   }

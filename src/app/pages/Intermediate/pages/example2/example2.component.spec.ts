@@ -6,7 +6,7 @@ import { AddNamePipe } from '../../pipes/add-name.pipe';
 import { By } from '@angular/platform-browser';
 import { Character } from '@interfaces/character.interface';
 
-fdescribe('Example2Component', () => {
+describe('Example2Component', () => {
   let component: Example2Component;
   let fixture: ComponentFixture<Example2Component>;
   let compiled: HTMLElement;

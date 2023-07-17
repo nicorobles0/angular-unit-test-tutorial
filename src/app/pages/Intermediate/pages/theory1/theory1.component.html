@@ -1,0 +1,85 @@
+<section class="theory">
+  <h1 class="theory__title">Introducción</h1>
+  <ol>
+    <li class="theory__li">
+      <h2 class="theory__subtitle">Estructura archivo de tests Servicios</h2>
+    </li>
+    <img
+      class="theory__img"
+      src="/assets/img/theory-1/theory-2.png"
+      alt="Estructura archivo tests"
+    />
+    <!-- verify -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">verify()</h2>
+    </li>
+    <p class="theory__text">
+      Se utiliza para verificar que no haya solicitudes HTTP pendientes o no
+      solicitadas después de realizar las pruebas. Después de realizar tus
+      pruebas y simular las solicitudes HTTP, llamar a verify() es una buena
+      práctica para asegurarte de que todas las solicitudes esperadas se hayan
+      realizado y no haya solicitudes adicionales o pendientes que no se hayan
+      verificado.
+    </p>
+    <!-- expectOne -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">expectOne()</h2>
+    </li>
+    <p class="theory__text">
+      Se utiliza para esperar y capturar una solicitud HTTP específica durante
+      las pruebas. La función expectOne() se utiliza para definir qué solicitud
+      HTTP se espera y capturarla para poder realizar aserciones sobre ella.
+    </p>
+    <!-- flush -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">flush()</h2>
+    </li>
+    <p class="theory__text">
+      Se utiliza para proporcionar una respuesta simulada a la solicitud HTTP
+      capturada. Puedes pasarle como argumento los datos que deseas simular como
+      respuesta.
+    </p>
+    <!-- spyOn -->
+    <li class="theory__li">
+      <h2 class="theory__subtitle">spyOn()</h2>
+    </li>
+    <p class="theory__text">
+      Cuando utilizas spyOn(), puedes "espiar" métodos o funciones específicas
+      para comprobar si se han llamado, cuántas veces se han llamado, con qué
+      argumentos se han llamado y más. Un spyOn() recibe dor parametros: En el
+      primero recibe el objeto en donde se implementará el espia, y en el
+      segundo parametro recibe el método a espiar.
+    </p>
+    <p class="theory__text">
+      Además de espiar en los métodos, la función spyOn(), te permite resolver
+      el metodo con alguna una respuesta controlada, valor, un llamado falso o
+      incluso su ejecución normal.
+    </p>
+    <code class="theory__code">
+      <ol class="code__list">
+        <li class="code__line">
+          <strong class="theory__blod"
+            >spyOn( component, 'getCharacterList' ).and.callFake();</strong
+          >
+          Permite hacer un llamado falso, es decir, que el metodo se llama pero
+          no se ejecuta. Este recibe un callback, el cual es el código que se
+          ejecuta en lugar del original
+        </li>
+        <li class="code__line">
+          <strong class="theory__blod"
+            >spyOn( component, 'getCharacterList' ).and.callThrough();</strong
+          >
+          Permite la ejecución normal del método.
+        </li>
+        <li class="code__line">
+          <strong class="theory__blod"
+            >spyOn( component, 'getCharacterList' ).and.returnValue();</strong
+          >
+          Permite hacer una ejecución falsa del método devolviendo un resultado concreto
+        </li>
+
+        <li class="code__line">)&#125;</li>
+      </ol>
+    </code>
+  </ol>
+</section>

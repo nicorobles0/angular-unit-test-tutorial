@@ -1,0 +1,9 @@
+<h1>El ID del personaje es: {{ characterId }}</h1>
+<hr />
+<br />
+<section class="container">
+  <app-character-card
+    [character]="character"
+    (onSetId)="setcharacterID($event)"
+  ></app-character-card>
+</section>

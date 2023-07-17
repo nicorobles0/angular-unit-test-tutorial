@@ -12,7 +12,7 @@
     ]
   },
   {
-    "label": "Tests Componente",
+    "label": "Components",
     "isRelative": true,
     "path": "/basico",
     "children": [
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "label": "Test Servicios",
+    "label": "Services",
     "isRelative": true,
     "path": "/intermedio/teoria",
     "children": [
@@ -71,7 +71,7 @@
     ]
   },
   {
-    "label": "Tests Pipes, Inputs, Outputs",
+    "label": "Pipes, Inputs, Outputs, Router",
     "isRelative": true,
     "path": "/intermedio",
     "children": [

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-//import { HttpClientTestingModule } from '@angular/common/http/testing'
 //import { PLATFORM_ID } from '@angular/core';
 import { ExampleComponent } from './example.component';
 
@@ -23,7 +22,6 @@ describe('ExampleComponent', () => {
      */
     await TestBed.configureTestingModule({
       declarations: [ExampleComponent],
-      // imports: [ HttpClientTestingModule ]
       //providers: [{ provide: PLATFORM_ID, useValue: 'browser' }],
     }).compileComponents();
   });
@@ -73,7 +71,7 @@ describe('ExampleComponent', () => {
    it('should disable button correctly', () => {
     component.increaseBy(10);
     expect(component.disabledPlusButton).toBeTrue();
-    component.increaseBy(9);
+    component.increaseBy(-9);
     expect(component.disabledPlusButton).not.toBeTrue();
   });
 
@@ -86,20 +84,17 @@ describe('ExampleComponent', () => {
   // });
 
   // Pruebas a un método privado utilizando un spy
-  it('should block button when counter value iqual to 10', () => {
+  it('should block button when counter value when is equal or major to 10', () => {
     const spy = spyOn(component as any, '__blockButtons').and.callThrough();
     component.increaseBy(10);
     // Prueba para verificar que una función haya sido llamada
     expect(spy).toHaveBeenCalled();
     component.increaseBy(9);
     // Prueba de llamado con parametros
-    expect(spy).toHaveBeenCalledWith(9);
+    expect(spy).toHaveBeenCalledWith(10);
     // Pruebas para verificar número de llamados a una función
     expect(spy).toHaveBeenCalledTimes(2)
   });
-
-
-  
 
   // Pruebas a un método con tiempo diferido ej : Fake Async Y tick
   it('should increment variable counter (5) by defer time (Tick)', fakeAsync (() => {

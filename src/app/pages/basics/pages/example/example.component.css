@@ -24,7 +24,7 @@
     width: max-content;
     padding: 0 1.5rem;
   }
-  .defer__button:disabled{
+  .counter__button:disabled, .defer__button:disabled{
     background-color: var(--color-contrast);
     cursor: wait;
   }

@@ -1,8 +1,0 @@
-<section class="intermediate-index">
-    <div class="intermediate-index__loading" *ngIf="characters.length === 0">
-        <h1>Cargando ...</h1>
-    </div>
-    <ng-container *ngFor="let character of characters">
-        <app-character-card [character]="character"></app-character-card>
-    </ng-container>
-</section>

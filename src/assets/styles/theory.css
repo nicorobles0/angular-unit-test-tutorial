@@ -33,7 +33,8 @@
   line-height: 2.1rem;
   margin-bottom: 1rem;
   text-align: justify;
+  color: var(--color-text);
 }
 .theory__blod{
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }

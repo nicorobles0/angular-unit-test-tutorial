@@ -20,7 +20,7 @@ export class ExampleComponent {
   increaseBy(value: number) {
     //if (isPlatformBrowser(this.platformId)) {
     this.counter += value;
-    this.__blockButtons(value);
+    this.__blockButtons(this.counter);
     //}
   }
   /**
@@ -39,7 +39,7 @@ export class ExampleComponent {
    * @param value valor actual del contador
    */
   private __blockButtons(value: number) {
-    if(value === 10) {this.disabledPlusButton = true}
+    if(value >= 10) {this.disabledPlusButton = true}
     else {this.disabledPlusButton = false};
   }
 

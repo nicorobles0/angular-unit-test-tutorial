@@ -7,18 +7,23 @@ import {
 import { Character, CharactersList } from '@interfaces/character.interface';
 
 describe('CharacterService', () => {
+  // Variable de del tipo de nuetro servicio
   let service: CharacterService;
-  // Instacia controlador http pero de pruebas
+  // Instacia controlador http (importar el de pruebas)
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      // Importar el módulo de pruebas
       imports: [HttpClientTestingModule],
     });
+    // Iyectamos el servicio en nuestra variable
     service = TestBed.inject(CharacterService);
+    // Inyectamos el controlador en nuesta variable http mock
     httpMock = TestBed.inject(HttpTestingController);
   });
   // Verificamos despues de cada prueba si es que queda alguna petición abierta para limpiarla
+  // Importante hacer esto cuando se testean metodos que hacen llamados a enlaces externos.
   afterEach(() => {
     httpMock.verify();
   });
@@ -41,41 +46,13 @@ describe('CharacterService', () => {
           id: 1,
           name: 'Rick Sanchez',
           status: 'Alive',
-          species: 'Human',
-          type: '',
-          gender: 'Male',
-          origin: {
-            name: 'Earth (C-137)',
-            url: 'https://rickandmortyapi.com/api/location/1',
-          },
-          location: {
-            name: 'Citadel of Ricks',
-            url: 'https://rickandmortyapi.com/api/location/3',
-          },
           image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-          episode: ['https://rickandmortyapi.com/api/episode/1'],
-          url: 'https://rickandmortyapi.com/api/character/1',
-          created: '2017-11-04T18:48:46.250Z',
         },
         {
           id: 1,
           name: 'Rick Sanchez',
           status: 'Alive',
-          species: 'Human',
-          type: '',
-          gender: 'Male',
-          origin: {
-            name: 'Earth (C-137)',
-            url: 'https://rickandmortyapi.com/api/location/1',
-          },
-          location: {
-            name: 'Citadel of Ricks',
-            url: 'https://rickandmortyapi.com/api/location/3',
-          },
           image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-          episode: ['https://rickandmortyapi.com/api/episode/1'],
-          url: 'https://rickandmortyapi.com/api/character/1',
-          created: '2017-11-04T18:48:46.250Z',
         },
       ],
     };
@@ -105,17 +82,18 @@ describe('CharacterService', () => {
     const request = httpMock.expectOne(
       'https://rickandmortyapi.com/api/character'
     );
+    request.flush(request);
     // Comprobamos que el llamado sea del tipo indicado
     expect(request.request.method).toBe('GET');
   });
 
   // xit y xdescribe omiten las funciones al ejecutar las pruebas.
   xit('should be get 404 found', (done: DoneFn) => {
-    service.getCharacterList('charactera').subscribe({
-      error({ status }) {
-        expect(status === 404).toBeTrue();
-        done();
-      },
-    });
+    // service.getCharacterList('charactera').subscribe({
+    //   error({ status }) {
+    //     expect(status === 404).toBeTrue();
+    //     done();
+    //   },
+    // });
   });
 });

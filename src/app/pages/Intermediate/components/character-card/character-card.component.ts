@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '@interfaces/character.interface';
 
 @Component({
@@ -9,5 +9,11 @@ import { Character } from '@interfaces/character.interface';
 export class CharacterCardComponent {
 
   @Input() character?: Character;
+  @Output() onSetId: EventEmitter<number> = new EventEmitter();
+
+  saveCharacterId(character: Character){
+    if(!character){ return };
+    this.onSetId.emit(character.id)
+  }
 
 }

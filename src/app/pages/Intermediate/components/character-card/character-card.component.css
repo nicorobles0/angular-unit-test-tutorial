@@ -4,13 +4,11 @@
   border-radius: 0.7rem;
   border: 1px solid var(--color-contrast);
   transition: all 0.2s ease-out;
+  min-width: 250px;
 }
 .character:hover {
   transform: scale(1.02);
   box-shadow: 0px 0px 15px -5px var(--color-primary);
-}
-.character:hover .character__link {
-  color: var(--color-primary);
 }
 .character__content {
   color: var(--color-text);
@@ -32,11 +30,16 @@
 .character__name {
   font-size: 2rem;
 }
-.character__link {
+.character__button {
   width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem;
   box-sizing: border-box;
+  border: none;
   background-color: var(--color-contrast);
   border-radius: 0 0 0.6rem 0.6rem;
+  cursor: pointer;
+}
+.character__button:hover {
+  color: var(--color-primary);
 }

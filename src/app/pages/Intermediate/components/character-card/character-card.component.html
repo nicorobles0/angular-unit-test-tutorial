@@ -1,7 +1,7 @@
 <article class="character" *ngIf="character">
-    <a class="character__content" routerLink="/hola">
+    <div class="character__content">
         <img class="character__img" [src]="character.image" [alt]="character.name">
-        <h2 class="character__name">{{ character.name | addName }} </h2>
-        <span class="character__link" >Ver más</span>      
-    </a>
+        <h2 class="character__name">{{ character.name | addName }}</h2>
+        <button class="character__button" (click)="saveCharacterId(character)" >Guardar</button>      
+    </div>
 </article>

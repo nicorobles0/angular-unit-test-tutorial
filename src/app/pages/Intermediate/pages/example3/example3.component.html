@@ -1,0 +1,129 @@
+<h1 class="title">Ejemplo formulario</h1>
+<form
+  class="form"
+  [formGroup]="fakeForm"
+  (ngSubmit)="sendForm()"
+  autocomplete="off"
+>
+  <div class="form__group">
+    <label class="group__label" for="names">Nombres*</label>
+    <input
+      class="group__input"
+      type="text"
+      formControlName="names"
+      name="names"
+    />
+    <span
+      *ngIf="
+        fakeForm.get('names')?.getError('required') &&
+        fakeForm.get('names')?.touched
+      "
+      error-names
+      class="group__error"
+      >Este campo es requerido *</span
+    >
+    <span
+      *ngIf="
+        fakeForm.get('names')?.getError('minlength') &&
+        fakeForm.get('names')?.touched
+      "
+      error-names
+      class="group__error"
+      >Este campo requiere al menos 5 caracteres *</span
+    >
+  </div>
+  <div class="form__group">
+    <label class="group__label" for="phone">Teléfono*</label>
+    <input
+      class="group__input"
+      type="number"
+      formControlName="phone"
+      name="phone"
+    />
+    <span
+      *ngIf="
+        fakeForm.get('number')?.getError('required') &&
+        fakeForm.get('number')?.touched
+      "
+      error-phone
+      class="group__error"
+      >Este campo es requerido *</span
+    >
+    <span
+      *ngIf="
+        fakeForm.get('number')?.getError('minlength') &&
+        fakeForm.get('number')?.touched
+      "
+      error-phone
+      class="group__error"
+      >Este campo requiere 10 números *</span
+    >
+    <span
+      *ngIf="
+        fakeForm.get('number')?.getError('pattern') &&
+        fakeForm.get('number')?.touched
+      "
+      error-phone
+      class="group__error"
+      >El campo solo debe tener números *</span
+    >
+  </div>
+  <div class="form__group">
+    <label class="group__label" for="email">Correo*</label>
+    <input
+      class="group__input"
+      type="email"
+      formControlName="email"
+      name="email"
+    />
+    <span
+      *ngIf="
+        fakeForm.get('email')?.getError('required') &&
+        fakeForm.get('email')?.touched
+      "
+      error-email
+      class="group__error"
+      >Este campo es requerido *</span
+    >
+    <span
+      *ngIf="
+        fakeForm.get('email')?.getError('email') &&
+        fakeForm.get('email')?.touched
+      "
+      error-email
+      class="group__error"
+      >Correo invalido *</span
+    >
+  </div>
+  <div class="form__group">
+    <label class="group__label" for="department">Departamento*</label>
+    <select
+      class="group__input"
+      name="department"
+      formControlName="department"
+      id="department"
+    >
+      <option value="" disabled selected>Seleccione una opción</option>
+      <option value="Boyacá">Boyacá</option>
+      <option value="Boyacá">Cundinamarca</option>
+    </select>
+    <span
+      *ngIf="
+        fakeForm.get('department')?.getError('required') &&
+        fakeForm.get('department')?.touched
+      "
+      error-department
+      class="group__error"
+      >Este campo es requerido *</span
+    >
+  </div>
+  <div class="form__group">
+    <label class="group__label" for="city">Ciudad*</label>
+    <select class="group__input" name="city" formControlName="city" id="city">
+      <option value="" disabled selected>Seleccione una opción</option>
+      <option value="Tunja">Tunja</option>
+      <option value="Duitama">Duitama</option>
+    </select>
+  </div>
+  <button class="form__button" type="submit">Enviar</button>
+</form>

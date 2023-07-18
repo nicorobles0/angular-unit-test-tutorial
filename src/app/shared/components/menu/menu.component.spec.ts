@@ -13,7 +13,7 @@ import { IntermediateModule } from 'src/app/pages/Intermediate/Intermediate.modu
 import { Location } from '@angular/common';
 
 
-fdescribe('MenuComponent', () => {
+describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
   let compiled: HTMLElement;

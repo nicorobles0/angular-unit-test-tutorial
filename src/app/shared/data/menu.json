@@ -73,7 +73,7 @@
   {
     "label": "Pipes, Inputs, Outputs, Router",
     "isRelative": true,
-    "path": "/intermedio",
+    "path": "/intermedio/ejercicio2",
     "children": [
       {
         "label": "Ejercicio",
@@ -84,7 +84,7 @@
         "label": "Ver Tests Pipe",
         "isRelative": false,
         "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/pages/Intermediate/pipes/add-name.pipe.spec.ts"
-      },     
+      },
       {
         "label": "Ver Tests Input",
         "isRelative": false,
@@ -99,6 +99,18 @@
         "label": "Ver Tests Routing",
         "isRelative": false,
         "path": "https://github.com/nicorobles0/angular-unit-test-tutorial/blob/master/src/app/shared/components/menu/menu.component.spec.ts"
+      }
+    ]
+  },
+  {
+    "label": "Forms",
+    "isRelative": true,
+    "path": "/intermedio/ejercicio3",
+    "children": [
+      {
+        "label": "Ejercicio",
+        "isRelative": true,
+        "path": "/intermedio/ejercicio3"
       }
     ]
   }

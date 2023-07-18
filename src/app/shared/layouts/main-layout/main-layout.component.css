@@ -9,6 +9,8 @@
 .layout__aside {
   grid-area: aside;
   border-right: 1px solid var(--color-contrast);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .layout__workspace {
   grid-area: workspace;

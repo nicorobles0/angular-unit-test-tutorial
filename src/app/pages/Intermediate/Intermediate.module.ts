@@ -9,6 +9,8 @@ import { AddNamePipe } from './pipes/add-name.pipe';
 import { Theory1Component } from './pages/theory1/theory1.component';
 import { ExampleComponent } from './pages/example/example.component';
 import { Example2Component } from './pages/example2/example2.component';
+import { Example3Component } from './pages/example3/example3.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { Example2Component } from './pages/example2/example2.component';
     ExampleComponent,
     Theory1Component,
     Example2Component,
+    Example3Component,
   ],
   imports: [
     CommonModule,
     RouterModule,
     IntermediateRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CharacterService]
 })

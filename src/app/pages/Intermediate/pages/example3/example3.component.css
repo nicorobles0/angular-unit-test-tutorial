@@ -1,0 +1,65 @@
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.form {
+  width: 50rem;
+  padding: 3rem;
+  box-sizing: border-box;
+  border-radius: 0.7rem;
+  margin: 0 auto;
+  border: 1px solid var(--color-contrast);
+  text-align: center;
+}
+.form__group {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.group__label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.group__error {
+  box-sizing: border-box;
+  color: var(--color-secondary);
+  display: block;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}
+.group__input {
+  width: 100%;
+  padding: 1.5rem 0.7rem;
+  box-sizing: border-box;
+  color: var(--color-text);
+  border: 1px solid var(--color-black);
+  border-radius: 0.7rem;
+  background-color: transparent;
+}
+.group__input.ng-touched.ng-invalid {
+  border: 1px solid var(--color-error);
+} 
+.group__input:focus {
+  outline: none;
+  border: 1px solid var(--color-primary);
+}
+.form__button {
+  width: 30%;
+  padding: 1rem 0.7rem;
+  box-sizing: border-box;
+  border-radius: 0.7rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.form__button:hover {
+  transform: scale(1.03);
+}
+.form__button:disabled {
+  background-color: var(--color-contrast);
+  cursor: no-drop;
+}

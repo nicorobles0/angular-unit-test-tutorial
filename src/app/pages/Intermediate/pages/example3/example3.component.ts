@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './example3.component.html',
   styleUrls: ['./example3.component.css'],
 })
-export class Example3Component implements OnInit {
+export class Example3Component {
   fakeForm: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) {
@@ -18,8 +18,6 @@ export class Example3Component implements OnInit {
       city: [''],
     });
   }
-
-  ngOnInit(): void {}
 
   sendForm() {
     this.fakeForm.updateValueAndValidity();
@@ -33,9 +31,6 @@ export class Example3Component implements OnInit {
    * Función para enviar datos del formulario al localstorage
    */
   sendInfoToLocal() {
-    const storage = localStorage || null;
-    if (storage) {
-      storage.setItem('contact', JSON.stringify(this.fakeForm.value));
-    }
+    localStorage.setItem('contact', JSON.stringify(this.fakeForm.value));
   }
 }

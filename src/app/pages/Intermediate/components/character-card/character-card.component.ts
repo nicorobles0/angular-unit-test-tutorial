@@ -12,7 +12,6 @@ export class CharacterCardComponent {
   @Output() onSetId: EventEmitter<number> = new EventEmitter();
 
   saveCharacterId(character: Character){
-    if(!character){ return };
     this.onSetId.emit(character.id)
   }
 

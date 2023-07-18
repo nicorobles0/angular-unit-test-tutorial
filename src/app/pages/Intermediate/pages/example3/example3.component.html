@@ -42,8 +42,8 @@
     />
     <span
       *ngIf="
-        fakeForm.get('number')?.getError('required') &&
-        fakeForm.get('number')?.touched
+        fakeForm.get('phone')?.getError('required') &&
+        fakeForm.get('phone')?.touched
       "
       error-phone
       class="group__error"
@@ -51,21 +51,12 @@
     >
     <span
       *ngIf="
-        fakeForm.get('number')?.getError('minlength') &&
-        fakeForm.get('number')?.touched
+        fakeForm.get('phone')?.getError('minlength') &&
+        fakeForm.get('phone')?.touched
       "
       error-phone
       class="group__error"
-      >Este campo requiere 10 números *</span
-    >
-    <span
-      *ngIf="
-        fakeForm.get('number')?.getError('pattern') &&
-        fakeForm.get('number')?.touched
-      "
-      error-phone
-      class="group__error"
-      >El campo solo debe tener números *</span
+      >Este campo requiere 8 números al menos *</span
     >
   </div>
   <div class="form__group">
@@ -105,7 +96,7 @@
     >
       <option value="" disabled selected>Seleccione una opción</option>
       <option value="Boyacá">Boyacá</option>
-      <option value="Boyacá">Cundinamarca</option>
+      <option value="Cundinamarca">Cundinamarca</option>
     </select>
     <span
       *ngIf="
